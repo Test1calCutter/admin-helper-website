@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Helper - Commands</title>
+    <link rel="stylesheet" href="main-style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="hamburger-menu">
+            <button onclick="function toggleMenu() {
+                var accordian = document.getElementById('accordian');
+                if (accordian.style.display === 'block') {
+                  accordian.style.display = 'none';
+                } else {
+                  accordian.style.display = 'block';
+                  
+                }
+              }
+              toggleMenu()
+              "><img src="../menu.png" width="32px"></button>
+          </div>
+        <div id="accordian">
+            
+        <h1 class="title" id="home">Admin Helper</h1>
+
+        <ul class="show-dropdown main-navbar">
+            <div class="selector-active"><div class="top"></div><div class="bottom"></div></div>
+            <li data-section="all" class="active">
+                <a href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>All Commands</a>
+            </li>
+            <li data-section="admin">
+                <a href="javascript:void(0);"><i class="far fa-address-book"></i>Admin</a>
+            </li>
+            <li data-section="fun">
+                <a href="javascript:void(0);"><i class="far fa-clone"></i>Fun</a>
+            </li>
+            <li data-section="misc">
+                <a href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Misc</a>
+            </li>
+        </ul>
+        </div>
+    </header>
+    <section id="all">
+        <table class="rwd-table">
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Usage</th>
+          </tr>
+          <tr>
+            <td data-th="command">/help</td>
+            <td data-th="arg">Will show all commands.</td>
+            <td data-th="usage">/help</td>
+          </tr>
+          <tr>
+            <td data-th="command">/ban</td>
+            <td data-th="arg">Will ban selected user.</td>
+            <td data-th="usage">/ban [user] [reason]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/kick</td>
+            <td data-th="arg">Will kick selected user.</td>
+            <td data-th="usage">/kick [user] [reason]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/mute</td>
+            <td data-th="arg">Will mute selected user.</td>
+            <td data-th="usage">/mute [user] [time] [reason]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/unmute</td>
+            <td data-th="arg">Will unmute muted user.</td>
+            <td data-th="usage">/unmute [user]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/info</td>
+            <td data-th="arg">Two usages. Either to retrieve server info or to get user information.</td>
+            <td data-th="usage">/info or /info [user]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/afk</td>
+            <td data-th="arg">Will set afk status.</td>
+            <td data-th="usage">/afk (reason)</td>
+          </tr>
+          <tr>
+            <td data-th="command">/safety</td>
+            <td data-th="arg">Will show a modal to set up enhanced safety.</td>
+            <td data-th="usage">/safety</td>
+          </tr>
+          <tr>
+            <td data-th="command">/blacklistadd</td>
+            <td data-th="arg">Used to add words to the blacklist. Must have enhanced safety enabled.</td>
+            <td data-th="usage">/blacklistadd [word]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/blacklistremove</td>
+            <td data-th="arg">Used to remove words from the blacklist.</td>
+            <td data-th="usage">/blacklistremove [word]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/blacklistimport</td>
+            <td data-th="arg">Can be used to import a list of words using pastebin.</td>
+            <td data-th="usage">/blacklistimport [link]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/blacklistexport</td>
+            <td data-th="arg">Can be used to export/remove a list of words using pastebin.</td>
+            <td data-th="usage">/blacklistexport [link]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/blacklist</td>
+            <td data-th="arg">Will show all blacklisted words.</td>
+            <td data-th="usage">/blacklist</td>
+          </tr>
+          <tr>
+            <td data-th="command">/8ball</td>
+            <td data-th="arg">The almighty Magic 8ball will answer your questions.</td>
+            <td data-th="usage">/8ball [text]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/activity</td>
+            <td data-th="arg">Will tell you what you can do if youre bored.</td>
+            <td data-th="usage">/activity</td>
+          </tr>
+          <tr>
+            <td data-th="command">/about</td>
+            <td data-th="arg">Will tell you about Admin Helper.</td>
+            <td data-th="usage">/about</td>
+          </tr>
+          <tr>
+            <td data-th="command">/commandcreate</td>
+            <td data-th="arg">Will create a custom command.<br><i>Color <b>must</b> be in <a href="https://www.howtogeek.com/761277/what-is-a-hex-code-for-colors/">hex</a></i></td>
+            <td data-th="usage">/commandcreate [name] [title] [description] (url) (hex)</td>
+          </tr>
+          <tr>
+            <td data-th="command">/deletecommand</td>
+            <td data-th="arg">Will delete a user created command.</td>
+            <td data-th="usage">/deletecommand [name]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/listcommands</td>
+            <td data-th="arg">Will list all user created commands.</td>
+            <td data-th="usage">/listcommands</td>
+          </tr>
+          <tr>
+            <td data-th="command">/incidents</td>
+            <td data-th="arg">Will list current incidents.</td>
+            <td data-th="usage">/incidents [component]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/incidentslist</td>
+            <td data-th="arg">Will list all incidents. Prior and current.</td>
+            <td data-th="usage">/kick [user] (reason)</td>
+          </tr>
+          <tr>
+            <td data-th="command">/scheduled</td>
+            <td data-th="arg">Will list scheduled incidents.</td>
+            <td data-th="usage">/scheduled [component]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/screenshot</td>
+            <td data-th="arg">Will list make a screenshot of a website.</td>
+            <td data-th="usage">/screenshot [url]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/status</td>
+            <td data-th="arg">Will show the uptime percentage.</td>
+            <td data-th="usage">/status [component]</td>
+          </tr>
+          <tr>
+            <td data-th="command">/t</td>
+            <td data-th="arg">Will run a user created command.</td>
+            <td data-th="usage">/t [name]</td>
+          </tr>
+        </table>
+        
+    
+    </section>
+
+
+    <section id="admin">
+        <table class="rwd-table">
+            <tr>
+              <th>Command</th>
+              <th>Explaination</th>
+              <th>Usage</th>
+            </tr>
+            <tr>
+                <td data-th="command">/ban</td>
+                <td data-th="arg">Will ban selected user.</td>
+                <td data-th="usage">/ban [user] [reason]</td>
+              </tr>
+              <tr>
+                <td data-th="command">/kick</td>
+                <td data-th="arg">Will kick selected user.</td>
+                <td data-th="usage">/kick [user] [reason]</td>
+              </tr>
+              <tr>
+                <td data-th="command">/mute</td>
+                <td data-th="arg">Will mute selected user.</td>
+                <td data-th="usage">/mute [user] [time] [reason]</td>
+              </tr>
+            <tr>
+              <td data-th="command">/unmute</td>
+              <td data-th="arg">Will unmute muted user.</td>
+              <td data-th="usage">/unmute [user]</td>
+            </tr>
+            <tr>
+              <td data-th="command">/safety</td>
+              <td data-th="arg">Will show a modal to set up enhanced safety.</td>
+              <td data-th="usage">/safety</td>
+            </tr>
+            <tr>
+              <td data-th="command">/blacklistadd</td>
+              <td data-th="arg">Used to add words to the blacklist. Must have enhanced safety enabled.</td>
+              <td data-th="usage">/blacklistadd [word]</td>
+            </tr>
+            <tr>
+              <td data-th="command">/blacklistremove</td>
+              <td data-th="arg">Used to remove words from the blacklist.</td>
+              <td data-th="usage">/blacklistremove [word]</td>
+            </tr>
+            <tr>
+              <td data-th="command">/blacklistimport</td>
+              <td data-th="arg">Can be used to import a list of words using pastebin.</td>
+              <td data-th="usage">/blacklistimport [url]</td>
+            </tr>
+            <tr>
+              <td data-th="command">/blacklistexport</td>
+              <td data-th="arg">Can be used to export/remove a list of words using pastebin.</td>
+              <td data-th="usage">/blacklistexport [url]</td>
+            </tr>
+            <tr>
+              <td data-th="command">/blacklist</td>
+              <td data-th="arg">Will show all blacklisted words.</td>
+              <td data-th="usage">/blacklist</td>
+            </tr>
+            <tr>
+              <td data-th="command">/commandcreate</td>
+              <td data-th="arg">Will create a custom command.<br><i>Color <b>must</b> be in <a href="https://www.howtogeek.com/761277/what-is-a-hex-code-for-colors/">hex</a></i></td>
+              <td data-th="usage">/commandcreate [name] [title] [description] (url) (hex)</td>
+            </tr>
+            <tr>
+              <td data-th="command">/deletecommand</td>
+              <td data-th="arg">Will delete a user created command.</td>
+              <td data-th="usage">/deletecommand [name]</td>
+            </tr>
+          </table>
+          
+    </section>
+
+    <section id="fun">
+        <table class="rwd-table">
+            <tr>
+              <th>Command</th>
+              <th>Explaination</th>
+              <th>Usage</th>
+            </tr>
+            <tr>
+              <td data-th="command">/8ball</td>
+              <td data-th="arg">The almighty Magic 8ball will answer your questions.</td>
+              <td data-th="usage">/8ball [text]</td>
+            </tr>
+            <tr>
+              <td data-th="command">/activity</td>
+              <td data-th="arg">Will tell you what you can do if youre bored.</td>
+              <td data-th="usage">/activity</td>
+            </tr>
+
+            <tr>
+              <td data-th="command">/t</td>
+              <td data-th="arg">Will run a user created command.</td>
+              <td data-th="usage">/t [name]</td>
+            </tr>
+          </table>
+          
+    </section>
+
+    <section id="misc">
+        <table class="rwd-table">
+            <tr>
+              <th>Command</th>
+              <th>Explaination</th>
+              <th>Usage</th>
+            </tr>
+            <tr>
+              <td data-th="command">/info</td>
+              <td data-th="arg">Two usages. Either to retrieve server info or to get user information.</td>
+              <td data-th="usage">/info or /info [user]</td>
+            </tr>
+            <tr>
+              <td data-th="command">/about</td>
+              <td data-th="arg">Will tell you about Admin Helper.</td>
+              <td data-th="usage">/about</td>
+            </tr>
+            <tr>
+              <td data-th="command">/listcommands</td>
+              <td data-th="arg">Will list all user created commands.</td>
+              <td data-th="usage">/listcommands</td>
+            </tr>
+            <tr>
+              <td data-th="command">/incidents</td>
+              <td data-th="arg">Will list current incidents.</td>
+              <td data-th="usage">/incidents [component]</td>
+            </tr>
+            <tr>
+              <td data-th="command">/incidentslist</td>
+              <td data-th="arg">Will list all incidents. Prior and current.</td>
+              <td data-th="usage">/kick [user] (reason)</td>
+            </tr>
+            <tr>
+              <td data-th="command">/scheduled</td>
+              <td data-th="arg">Will list scheduled incidents.</td>
+              <td data-th="usage">/scheduled [component]</td>
+            </tr>
+            <tr>
+              <td data-th="command">/screenshot</td>
+              <td data-th="arg">Will list make a screenshot of a website.</td>
+              <td data-th="usage">/screenshot [url]</td>
+            </tr>
+            <tr>
+              <td data-th="command">/status</td>
+              <td data-th="arg">Will show the uptime percentage.</td>
+              <td data-th="usage">/status [component]</td>
+            </tr>
+          </table>
+          
+    </section>
+</body>
+</html>
