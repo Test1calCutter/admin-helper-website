@@ -38,5 +38,7 @@ $("#accordian").on("click","li",function(e){
 	});
 });
 
-
+jQuery('.alert-banner-close').on('click', function() {
+    jQuery(this).parent().remove();
+  });
 })
