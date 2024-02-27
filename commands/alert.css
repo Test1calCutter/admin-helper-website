@@ -2,7 +2,7 @@ body {
     height: 100vh;
     width: 100vh;
 }
-
+ 
 .alert-banner {
     z-index: 999999;
     position: fixed;
