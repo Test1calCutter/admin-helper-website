@@ -12,6 +12,9 @@ main {
   position: relative;
 }
 
+
+
+
 .triangle {
   position: absolute;
   width: 0;
@@ -115,4 +118,13 @@ article p {
   article p {
     font-size: 1.30em;
   }
+}
+
+.fade {
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  z-index: 101;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
 }
