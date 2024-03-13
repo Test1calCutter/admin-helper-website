@@ -1,0 +1,227 @@
+:root {
+    --clr-gray-light: #d7dfe2;
+    --clr-gray-med: #616b74;
+    --clr-gray-dark: #414b56;
+    --clr-link: #4d97b2;
+    --clr-popular: #ef257a;
+    --clr-technology: #651fff;
+    --clr-psychology: #e85808;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 100%;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #090808, #1c1c1c);
+    background: url('https://i.ibb.co/fvDfF8t/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    font-family: 'Ubuntu', sans-serif;
+}
+.nav{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0%; left: 0;
+    z-index: 100;
+}
+
+.fade {
+    height: 100%;
+    width: 100%;
+    top: 100%;
+    z-index: 101;
+    position: absolute;
+    background-color: white;
+}
+
+.nav-container-content{
+    width: 90%;
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.navbar a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 6px;
+    letter-spacing: 0.12px;
+    line-height: 15px;
+    color: #f4f4f4;
+    text-decoration: none;
+    -webkit-transition: 300ms ease-in-out;
+    -o-transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
+    padding: 9px 13px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+
+.navbar a:hover {
+    background: #fff;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    color: #000;
+}
+
+.navbar a:last-child {
+    padding: 9px 17px;
+    background: rgba(255,255,255,.15);
+    backdrop-filter: blur(2px);
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 15px;
+    margin-left: 8px;
+}
+
+.navbar a:last-child:hover{
+	color: #f4f4f4;
+    opacity: 0.9;
+    -webkit-box-shadow: 0px 6px 10px rgba(0,0,0,.12);
+    box-shadow: 0px 6px 10px rgba(0,0,0,.12);
+}
+
+@media screen and (max-width: 480px){
+    .nav-container-content{
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+    .navbar a{
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    .navbar a:last-child{
+        margin-left: 0;
+    }
+}
+
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10%;
+}
+  
+  .card {
+    overflow: hidden;
+    box-shadow: 0px 2px 20px var(--clr-gray-light);
+    background: white;
+    border-radius: 0.5rem;
+    position: relative;
+    width: 350px;
+    margin: 1rem;
+    transition: 250ms all ease-in-out;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 2px 40px var(--clr-gray-light);
+  }
+  
+  .banner-img {
+    position: absolute;
+    object-fit: cover;
+    height: 14rem;
+    width: 100%;
+  }
+  
+  .category-tag {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    background: red;
+    padding: 0.5rem 1.3rem 0.5rem 1rem;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    border-radius: 0 2rem 2rem 0;
+  }
+  
+  .popular {
+    background: var(--clr-popular);
+  }
+  
+  .technology {
+    background: var(--clr-technology);
+  }
+  
+  .psychology {
+    background: var(--clr-psychology);
+  }
+  
+  .card-body {
+    margin: 15rem 1rem 1rem 1rem;
+  }
+  
+  .blog-hashtag {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--clr-link);
+  }
+  
+  .blog-title {
+    line-height: 1.5rem;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .blog-description {
+    color: var(--clr-gray-med);
+    font-size: 0.9rem;
+  }
+  
+  .card-profile {
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+  }
+  
+  .profile-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .card-profile-info {
+    margin-left: 1rem;
+  }
+  
+  .profile-name {
+    font-size: 1rem;
+  }
+
+
+  
