@@ -2,14 +2,14 @@ body {
     height: 100vh;
     width: 100vh;
 }
- 
+
 .alert-banner {
     z-index: 999999;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    background: #5240ac;
+    background: #5240ac2c;
     width: 100%;
     border-bottom: 1px solid #EEEEEE;
     padding: 10px;

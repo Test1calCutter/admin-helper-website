@@ -6,7 +6,10 @@
   left: 50%;
   top: 0%;
   transform: translate(-50%);
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.158);
 }
+body{height: 100vh;
+  width: 100vh;}
 .rwd-table tr {
   border-top: 1px solid #22C37E;
   border-bottom: 1px solid #22C37E;
@@ -29,6 +32,8 @@
   width: 6.5em;
   display: inline-block;
 }
+
+
 @media (min-width: 480px) {
   .rwd-table td:before {
     display: none;
@@ -82,7 +87,7 @@ h1 {
   }
 }
 .rwd-table th, .rwd-table td:before {
-  color: #22C37E;
+  color: #6850df;
 }
 
 a {
