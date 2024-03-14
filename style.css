@@ -21,7 +21,6 @@ body {
     background: linear-gradient(180deg, #090808, #1c1c1c);
     background: url('https://i.ibb.co/fvDfF8t/background.png');
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: top center;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -409,7 +408,7 @@ a, button, input, textarea, select{
     left: 50%;
     width: 520px;
     height: 244px;
-    box-shadow: 0px 0px 15px 0px #9d03c8;
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.062);
     background-color: rgba(23,22,27,1);
     border-radius: 5px;animation: wobble 10s infinite alternate ease-in-out;
     transform: perspective(6000px) rotateY(-30deg) rotateZ(3deg);
@@ -418,6 +417,7 @@ a, button, input, textarea, select{
 .recreated-main .bar {
     height: 244px;
     width: 4px;
+    box-shadow: -1px 0px 5px 1px #9d03c8;
     background-color: #9d03c8;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -588,4 +588,14 @@ footer{
         font-size: 11px;
         padding: 8px 10px;
     }
+}
+
+.help {
+    position: relative;
+    z-index: 102;
+    color: white;
+    font-size: 1.6rem;
+    right: 290%;
+    top: 15px;
+    font-weight: 900;
 }
