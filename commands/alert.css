@@ -1,6 +1,27 @@
-body {
-    height: 100vh;
-    width: 100vh;
+
+@media (orientation:portrait){
+  body {
+    width: auto;
+  }
+  .alert-banner {
+    z-index: 999999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #5240ac2c;
+    max-width: 100%;
+    border-bottom: 1px solid #EEEEEE;
+    padding: 10px;
+    box-sizing: border-box;
+
+    color: #FFFFFF;
+    font-family: "Open Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-animation: alert-banner-slide-in 0.8s ease forwards;
+            animation: alert-banner-slide-in 0.8s ease forwards;
+  }
 }
 
 .alert-banner {
