@@ -1,0 +1,17 @@
+@media (orientation:portrait){
+    body {
+        min-height: 100vh;
+        position: relative;
+        overflow: scroll;
+        background: linear-gradient(180deg, #090808, #1c1c1c);
+          background: url('https://i.ibb.co/fvDfF8t/background.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top center;
+          font-family: 'Ubuntu', sans-serif;
+      }
+
+      .fade {
+        display: none;
+      }
+}
