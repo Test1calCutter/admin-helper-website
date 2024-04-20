@@ -7224,4 +7224,4 @@
 
 
 
-###### credits to Alone Services for the website design inspiration
+###### bro just scrolled so far for nothin
