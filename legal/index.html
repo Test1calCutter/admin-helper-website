@@ -1,0 +1,609 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../js/output.css" rel="stylesheet">
+    <title>Admin Helper</title>
+    <link rel="icon" href="https://i.imgur.com/fg0vpak.gif">
+    <meta content="Admin Helper - Enjoy moderation in style" property="og:title">
+    <meta content="https://i.imgur.com/fg0vpak.gif" property="og:image">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="title" content="Admin Helper - Our Legal Information">
+  <meta name="description" content="Check out our legal information about our data usage and terms of service!">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://i.imgur.com/fg0vpak.gif">
+  <meta property="og:title" content="Admin Helper - Our Legal Information>
+  <meta property="og:description" content="Check out our legal information about our data usage and terms of service!">
+  <meta property="og:image" content="https://i.imgur.com/fg0vpak.gif">
+  
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://i.imgur.com/fg0vpak.gif">
+  <meta property="twitter:title" content="Admin Helper - Our Legal Information">
+  <meta property="twitter:description" content="Check out our legal information about our data usage and terms of service!">
+  <meta property="twitter:image" content="https://i.imgur.com/fg0vpak.gif">
+  
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  
+      html,body {
+      height: 100vh;
+      scroll-behavior: smooth;
+      font-family: 'Poppins',sans-serif;
+  }
+  
+  
+      body {
+          overflow-x: hidden;
+      }
+  
+      #ud {
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #eaeaf3;
+       color: transparent;
+      }
+      #faq .line {
+    background: #767cce;
+    position: absolute;
+    transition: none;
+    transform: scale(0);
+    opacity: 1;
+  }
+  #faq p {
+    font-weight: 300;
+  }
+  #faq .line:nth-child(1) {
+    transform-origin: 100% 100%;
+    height: 1px;
+    width: 20%;
+    bottom: 0;
+  }
+  #faq .line:nth-child(4) {
+    transform-origin: 0 100%;
+    height: 1px;
+    width: 20%;
+    top: -1px;
+    right: 0;
+  }
+  #faq .line:nth-child(2) {
+    transform-origin: 100% 100%;
+    height: 100%;
+    width: 2px;
+    bottom: 0;
+    left: -1px;
+  }
+  #faq .line:nth-child(5) {
+    transform-origin: 100% 0;
+    height: 100%;
+    width: 2px;
+    bottom: 0;
+    right: -1px;
+  }
+  #faq .line:nth-child(3) {
+    transform-origin: 0 100%;
+    height: 1px;
+    width: 100%;
+    top: -1px;
+    left: -1px;
+  }
+  #faq .line:nth-child(6) {
+    transform-origin: 100% 0;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    right: -1px;
+  }
+  #faq:hover > .line {
+    transform: scale(1);
+    opacity: 0;
+    transition: all 1s;
+  }
+  #faq:hover > .line:nth-child(2), #faq:hover > .line:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+  #faq:hover > .line:nth-child(3), #faq:hover > .line:nth-child(6) {
+    transition-delay: 0.9s;
+  }
+  #faq:hover {
+      border-radius: 0.5vh;
+    background: rgba(255, 255, 255, 0.03);
+  }
+  
+  :root {
+      --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      --animation-duration: 1s;
+  }
+  @keyframes slideInUp {
+      0% {
+          opacity: 0;
+          transform: translateY(25%);
+     }
+      100% {
+          opacity: 1;
+          transform: none;
+     }
+  }
+  @keyframes slideInDown {
+      0% {
+          opacity: 0;
+          transform: translateY(-25%);
+     }
+      100% {
+          opacity: 1;
+          transform: none;
+     }
+  }
+  @keyframes slideInleft {
+      0% {
+          opacity: 0;
+          transform: translateX(25%);
+     }
+      100% {
+          opacity: 1;
+          transform: none;
+     }
+  }
+  @keyframes slideInRight {
+      0% {
+          opacity: 0;
+          transform: translateX(-25%);
+     }
+      100% {
+          opacity: 1;
+          transform: none;
+     }
+  }
+  @keyframes fadeIn {
+      0% {
+          opacity: 0;
+     }
+      100% {
+          opacity: 1;
+     }
+  }
+  @keyframes zoomIn {
+      0% {
+          opacity: 0;
+          transform: scale(0.75);
+     }
+      100% {
+          opacity: 1;
+          transform: none;
+     }
+  }
+  @keyframes zoomReverseIn {
+      0% {
+          opacity: 0;
+          transform: scale(1.25);
+     }
+      100% {
+          opacity: 1;
+          transform: none;
+     }
+  }
+  @keyframes flipInY {
+      0% {
+          opacity: 0;
+          transform: perspective(90vw) rotateY(67.5deg);
+     }
+      100% {
+          opacity: 1;
+          transform: none;
+     }
+  }
+  [data-animation] {
+      opacity: 0;
+      animation-timing-function: var(--animation-timing-function);
+      animation-fill-mode: both;
+      animation-duration: var(--animation-duration);
+  
+  }
+  .animations-disabled, .animations-disabled [data-animation] {
+      animation: none !important;
+      opacity: 1 !important;
+  }
+  .slideInUp {
+      animation-name: slideInUp;
+  }
+  .slideInDown {
+      animation-name: slideInDown;
+  }
+  .slideInLeft {
+      animation-name: slideInleft;
+  }
+  .slideInRight {
+      animation-name: slideInRight;
+  }
+  .fadeIn {
+      animation-name: fadeIn;
+  }
+  .zoomIn {
+      animation-name: zoomIn;
+  }
+  .zoomReverseIn {
+      animation-name: zoomReverseIn;
+  }
+  .flipInY {
+      animation-name: flipInY;
+  }
+  .flipOutY {
+      animation-name: flipInY;
+      animation-direction: reverse;
+  }
+  
+  
+  
+  @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  
+  .fade-in {
+      opacity:0;
+      -webkit-animation:fadeIn ease-in 1;
+      -moz-animation:fadeIn ease-in 1;
+      animation:fadeIn ease-in 1;
+  
+      -webkit-animation-fill-mode:forwards;
+      -moz-animation-fill-mode:forwards;
+      animation-fill-mode:forwards;
+  
+      -webkit-animation-duration:2s;
+      -moz-animation-duration:2s;
+      animation-duration:2s;
+  } 
+  
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+   }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+      transform: translatey(-20px);
+   }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+   }
+  }
+  
+  .loader {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #121212;
+    transition: opacity 0.75s, visibility 0.75s;
+  }
+  
+  .loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #545bb7;
+    border-top-color: #767cce;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+  }
+  
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  .circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 1px #545bb7;
+  }
+  
+  .pulse {
+    animation: pulse-animation 2s infinite;
+  }
+  
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px #545bb7;
+    }
+    100% {
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+  }
+  
+  nav {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+  
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 2vh;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f100;
+    border-radius: 2vh;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 1vh;
+    background: #424242;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  
+  
+    </style>
+  </head>
+  <body class="bg-custom-bg fadeIn" data-animation="fadeIn" data-animation-delay="100ms" style="animation-delay: 100ms;" data-animated="true">
+    
+  
+      <div class="root w-full  justify-center mx-auto">
+          <svg class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-neutral-800 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
+              <defs>
+                <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+                  <path d="M.5 200V.5H200" fill="none"></path>
+                </pattern>
+              </defs>
+              <svg x="50%" y="-1" class="overflow-visible fill-neutral-900">
+                <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0"></path>
+              </svg>
+              <rect width="100%" height="100%" stroke-width="0" fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"></rect>
+            </svg>
+            <div class="navbar justify-center mx-2 flex items-center">
+          <nav class="p-6 bg-custom-secondary flex justify-center sm:justify-between w-[48rem] items-center mt-6 rounded-3xl">
+            <div class="logo hidden sm:flex">
+              <img style="height: 32px; width: 32px; border-radius: 100%;" src="https://i.imgur.com/fg0vpak.gif">
+          </div>
+          <div class="name flex items-center text-center gap-4 flex-wrap">
+            <ul class="flex items-center gap-4 text-custom-text text-opacity-70 font-medium text-sm">
+              <a href="../index.html">
+                <li class="hover:text-opacity-100 hover:text-custom-primary duration-[400ms] ease-in-out hover:-translate-y-1">Home</li>
+              </a>
+              <a href="#tos">
+                <li class="hover:text-opacity-100 hover:text-custom-primary duration-[400ms] ease-in-out hover:-translate-y-1">Terms Of Service</li>
+              </a>
+              <a href="#pp">
+                <li class="hover:text-opacity-100 hover:text-custom-primary duration-[400ms] ease-in-out hover:-translate-y-1">Privacy Policy</li>
+              </a>
+              <a href="#data">
+                <li class="hover:text-opacity-100 hover:text-custom-primary duration-[400ms] ease-in-out hover:-translate-y-1">Data Removal</li>
+              </a>
+            </ul>
+          </div>        
+          </nav>
+      </div>
+          <main>
+              <div class=" justify-center items-center mx-auto max-w-[1300px] px-4 md:px-0">
+                  <div class="glow-container flex justify-center items-center">
+                      <div class="glow absolute bg-custom-accent w-[80%] lg:w-[1100px] h-[400px] blur-[44px] rounded-[50%] opacity-40 -z-10 top-[-250px]"></div>
+                  </div>
+                  <div class="announcement mt-[7rem] md:mt-48 mb-6 justify-center flex items-center">
+                    <div class="px-4 py-2 bg-custom-secondary flex items-center text-custom-text gap-3 rounded-xl">
+                      <div class="circle pulse bg-custom-primary"></div>
+                      <p class="text-[12px] text-opacity-70 text-custom-text"><a target="_blank" href="https://discord.gg/KfrRXrJDVK">discord.gg/KfrRXrJDVK</a></p>
+                    </div>
+                  </div>
+                  <div class="title text-[64px] text-center font-medium tracking-tighter leading-[4.3rem]">
+                      <h1 class="text-custom-text line ">Welcome to our<span id="ud" class="italic"></span></h1>
+                      <div id="evil">
+                      <h1 data-value="Legal Information" class="bg-gradient-to-r from-custom-primary to-custom-accent bg-clip-text text-transparent font-semibold">Legal Information</h1>
+                    </div>
+                    </div>
+                  
+                  <div class="text-info text-[12px] sm:text-[15px] text-center md:w-[40%] mx-auto text-custom-text text-opacity-80 mt-4">
+                      <p>We have the right to change the Privacy Policy and Terms Of Service at <span class="text-custom-text text-opacity-100">any time</span> without announcing it.</p>
+                  </div>
+
+                
+  
+              </div>
+          </main>
+      </div>
+  
+
+  <section id="tos">
+
+    <div data-animation="slideInDown" data-animation-delay=".45s" class="faq-container mt-[13rem] mb-4 px-8 pb-8 pt-16 sm:px-6  mx-auto md:w-[63rem]">
+        <h2 class="text-custom-text font-semibold text-[30px] mb-5 ml-2">Terms Of Service</h2>
+        <div id="faq" class="ft bg-custom-secondary p-4 rounded-xl w-full  cursor-default relative ">
+            <div class="line"></div> 
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="title-faq flex items-center gap-3">
+                <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2 px-4">
+                  <a class="font-bold">1</a>
+                </div>
+                <h2 class="text-custom-text font-medium" id="faq1">Usage Agreement</h2>
+            </div>
+            <p class="mt-4 text-custom-text text-opacity-80"><b>By inviting Admin Helper (discord user ID 982628261718798384. Hereby referred to as "bot") to a Discord Server ("server"), or by using its features, you agree to the below listed Terms of Service ("terms") and Privacy Policy ("policy").<br><br>You may invite the bot to a server you have sufficient permissions for and use its sets of features on any server you share with it.<br><br>This priviledge can be revoked and the bot be removed from the server at any time, should you violate these terms and/or policy, the Terms of Service and/or Privacy Policy of Discord Inc., or their Community Guidelines.<br><br>Through inviting the bot, you agree to share data as described in the bot's policy. The intended use of this data is described in said policy.</p>
+        </div>
+
+            <div id="faq" class="ft mt-8 bg-custom-secondary p-4 rounded-xl w-full  cursor-default relative ">
+                <div class="line"></div> 
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="title-faq flex items-center gap-3">
+                    <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2 px-4">
+                      <a class="font-bold">2</a>
+                    </div>
+                    <h2 class="text-custom-text font-medium">Intended Age</h2>
+                </div>
+                <p class="mt-4 text-custom-text text-opacity-80">Individuals of minimal age required to use Discord, as described in their Terms of Service may use the bot and its features.<br><br>Certain features are only available within text channels marked as "age-gated" (Also known as "NSFW") and may only be used by individuals of mature age.<br><br>Granting access to these features for individuals under age of maturity will result in a removal of the bot from any server associated with the indivual granting access to these features for people under the age of maturity.</p>
+            </div>
+
+            <div id="faq" class="ft mt-8 bg-custom-secondary p-4 rounded-xl w-full  cursor-default relative ">
+                <div class="line"></div> 
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="title-faq flex items-center gap-3">
+                    <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2 px-4">
+                      <a class="font-bold">3</a>
+                    </div>
+                    <h2 class="text-custom-text font-medium">Affiliation</h2>
+                </div>
+                <p class="mt-4 text-custom-text text-opacity-80">The Bot is not affiliated with, supported or made by Discord Inc.<br>Any direct connection to Discord or any of its Trademark objects is purely coincidental.<br><br>We do not claim to have the copyright ownership of any of Discord's assets, trademarks or other intellectual property.</p>
+            </div>
+
+            <div id="faq" class="ft mt-8 bg-custom-secondary p-4 rounded-xl w-full  cursor-default relative ">
+                <div class="line"></div> 
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="title-faq flex items-center gap-3">
+                    <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2 px-4">
+                      <a class="font-bold">4</a>
+                    </div>
+                    <h2 class="text-custom-text font-medium">Liability</h2>
+                </div>
+                <p class="mt-4 text-custom-text text-opacity-80">The owner of the bot has faith in a users honesty and that the bot may only be used for its intended purpose and not in malicious ways against others or Discord Inc.<br>We reserve the right to update these Terms and policy at our own discretion, giving a 1 Week (7 days) period to opt out of the changed Terms and policy.<br><br>You may opt out of these terms and policy by removing the bot from any server you have permission for and not using its features.</p>
+            </div>
+
+            <div id="faq" class="ft mt-8 bg-custom-secondary p-4 rounded-xl w-full  cursor-default relative ">
+                <div class="line"></div> 
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="title-faq flex items-center gap-3">
+                    <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2 px-4">
+                      <a class="font-bold">5</a>
+                    </div>
+                    <h2 class="text-custom-text font-medium">Contact</h2>
+                </div>
+                <p class="mt-4 text-custom-text text-opacity-80">People may get in contact through e-mail at <a href="mailto:addminhelper@gmail.com" class="text-custom-primary">addminhelper@gmail.com</a>, or through the official <a href="https://discord.gg/ttJ25KGBEU" class="text-custom-primary">Support Discord</a> of the Bot.<br><br>Other ways of support may be provided but aren't guaranteed.</p>
+            </div>
+</div>
+  </section>
+  
+  
+          <section id="pp" data-animation="slideInDown" data-animation-delay="1s" class="flex justify-center items-center">
+              <div class="faq-container mt-[13rem] mb-4 px-8 pb-8 pt-16 sm:px-6  mx-auto md:w-[63rem]">
+                  <h2 class="text-custom-text font-semibold text-[30px] mb-5 ml-2">Privacy Policy</h2>
+                      <div id="faq" class="ft bg-custom-secondary p-4 rounded-xl w-full  cursor-default relative ">
+                          <div class="line"></div> 
+                          <div class="line"></div>
+                          <div class="line"></div>
+                          <div class="line"></div>
+                          <div class="line"></div>
+                          <div class="line"></div>
+                          <div class="title-faq flex items-center gap-3">
+                              <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2 px-4">
+                                <a class="font-bold">1</a>
+                              </div>
+                              <h2 class="text-custom-text font-medium" id="faq1">Usage of Data</h2>
+                          </div>
+                          <p class="mt-4 text-custom-text text-opacity-80"><b>The bot may use stored data, as defined below, for different features including but not limited to: Welcoming joining users (when enabled) and command handling.<br><br>No usage of data outside of the aformentioned cases will happen and the data is not shared with any 3rd-party site or service.</p>
+                      </div>
+  
+                          <div id="faq" class="ft mt-8 bg-custom-secondary p-4 rounded-xl w-full  cursor-default relative ">
+                              <div class="line"></div> 
+                              <div class="line"></div>
+                              <div class="line"></div>
+                              <div class="line"></div>
+                              <div class="line"></div>
+                              <div class="line"></div>
+                              <div class="title-faq flex items-center gap-3">
+                                  <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2 px-4">
+                                    <a class="font-bold">2</a>
+                                  </div>
+                                  <h2 class="text-custom-text font-medium">Stored Information</h2>
+                              </div>
+                              <p class="mt-4 text-custom-text text-opacity-80">The bot may store the following information automatically when being invited to a new Discord Server: <br>
+                                <span class="text-custom-primary">server_id</span> with the Server's ID as value. <br>
+                                No other information outside of the above mentioned one will be stored <b>automatically</b>.</p>
+                          </div>
+  
+                          <div id="faq" class="ft mt-8 bg-custom-secondary p-4 rounded-xl w-full  cursor-default relative ">
+                              <div class="line"></div> 
+                              <div class="line"></div>
+                              <div class="line"></div>
+                              <div class="line"></div>
+                              <div class="line"></div>
+                              <div class="line"></div>
+                              <div class="title-faq flex items-center gap-3">
+                                  <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2 px-4">
+                                    <a class="font-bold">3</a>
+                                  </div>
+                                  <h2 class="text-custom-text font-medium">Updating Data</h2>
+                              </div>
+                              <p class="mt-4 text-custom-text text-opacity-80">The data may be updated when using specific features of the bot.<br><br>Such updates of data often requires the input of a user, including data that can be seen as identifiable and sensitive, such as text messages.<br><br>This data is only kept in the database and only used for its intended purpose.</p>
+                          </div>
+              </div>
+          </section>
+
+          <section id="data" data-animation="slideInDown" data-animation-delay="1s" class="flex justify-center items-center">
+            <div class="faq-container mt-[13rem] mb-4 px-8 pb-8 pt-16 sm:px-6  mx-auto md:w-[63rem]">
+                <h2 class="text-custom-text font-semibold text-[30px] mb-5 ml-2">Removal of Data</h2>
+                    <div id="faq" class="ft bg-custom-secondary p-4 rounded-xl w-full  cursor-default relative ">
+                        <div class="line"></div> 
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="title-faq flex items-center gap-3">
+                            <div class="icon bg-custom-primary text-custom-text m-[4] rounded-lg p-2 px-4">
+                              <a class="font-bold">1</a>
+                            </div>
+                            <h2 class="text-custom-text font-medium" id="faq1">Manual Removal</h2>
+                        </div>
+                        <p class="mt-4 text-custom-text text-opacity-80"><b>Manual removal of the data can be requested through email at <a href="mailto:addminhelper@gmail.com" class="text-custom-primary">addminhelper@gmail.com</a>.<br><br>For security reasons will we ask you to provide us with proof of ownership of the server, that you wish the data to be removed of.<br><br>Only a server owner may request manual removal of data and requesting it will result in the bot being removed from the server, if still present on it.</p>
+                    </div>
+            </div>
+        </section>
+          <footer class="bg-custom-bg">
+              <div class="mx-auto max-w-screen-xl px-8 pb-8 pt-16 sm:px-6 lg:px-[5rem] lg:pt-24">
+                
+                  <span class="relative flex justify-center">
+                      <div class="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-custom-accent to-transparent opacity-75"></div>
+                    </span>
+                    <div class="footer justify-between mt-5 px-8 flex">
+                     <a href="https://discord.gg/KfrRXrJDVK" target="_blank">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-discord text-custom-text text-opacity-20 hover:text-custom-primary duration-200 ease-out" viewBox="0 0 16 16">
+                          <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"></path>
+                        </svg>
+                     </a>
+                    </div>
+              </div>
+              <script src="../js/loader.js"></script>
+              <script src="../js/glitch.js"></script>
+              <script src="../js/anim.js"></script>
+              <script>
+                window.onbeforeunload = function () {
+                  window.scrollTo(0, 0);
+                }
+              </script>
+  
+  
+  </footer></body></html>
